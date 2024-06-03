@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Obscenity Content Police",
+    "description": "Helps parents to keep a close watch on the content their child has access to.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "file.html",
+        "default_icon": "some_extension.png"
+    }
+}
