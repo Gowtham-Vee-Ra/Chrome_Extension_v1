@@ -3,8 +3,28 @@
     "name": "Obscenity Content Police",
     "description": "Helps parents to keep a close watch on the content their child has access to.",
     "version": "1.0",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
     "action": {
-        "default_popup": "file.html",
-        "default_icon": "some_extension.png"
-    }
-}
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/some_extension.png",
+        "48": "images/some_extension.png",
+        "128": "images/some_extension.png"
+      }
+    },
+    "icons": {
+      "16": "images/some_extension.png",
+      "48": "images/some_extension.png",
+      "128": "images/some_extension.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
