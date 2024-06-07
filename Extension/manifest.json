@@ -3,12 +3,12 @@
     "name": "Obscenity Content Police",
     "description": "Helps parents to keep a close watch on the content their child has access to.",
     "version": "1.0",
-    "permissions": ["activeTab", "storage"],
+    "permissions": ["identity","identity.email","activeTab", "storage"],
     "background": {
       "service_worker": "background.js"
     },
     "action": {
-      "default_popup": "popup.html",
+      "default_popup": "popup/popup.html",
       "default_icon": {
         "16": "images/some_extension.png",
         "48": "images/some_extension.png",
@@ -20,6 +20,14 @@
       "48": "images/some_extension.png",
       "128": "images/some_extension.png"
     },
+    "oauth2": {
+        "client_id": "952745800553-d5j2fbgvtv461jl5vhpd6mctjnk6dli5.apps.googleusercontent.com",
+        "scopes": [
+          "openid",
+          "email",
+          "profile"
+        ]
+      },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
